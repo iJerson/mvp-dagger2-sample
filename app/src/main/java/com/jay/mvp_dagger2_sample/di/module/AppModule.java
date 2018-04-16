@@ -59,10 +59,9 @@ public class AppModule {
     @Provides
     @Singleton
     Retrofit provideRetrofit(Gson gson, OkHttpClient okHttpClient){
-//        String hostname = prefser.get(Constant.HOSTNAME, String.class, "http://192.168.100.100");
         return new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(gson))
-                .baseUrl("http://192.168.100.116")
+                .baseUrl("http://[API_URL_HERE]")
                 .client(okHttpClient)
                 .build();
     }
