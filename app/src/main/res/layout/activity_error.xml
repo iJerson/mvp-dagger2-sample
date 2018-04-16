@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.error.ErrorActivity">
 
-    <com.jinisyssoftware.java_mobile_scaffolding.helper.icon.IconTextView
+    <com.jay.mvp_dagger2_sample.helper.icon.IconTextView
         android:id="@+id/iconTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
