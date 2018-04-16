@@ -1,6 +1,6 @@
-# Java Scaffolding
+# MVP Dagger2 Scaffolding
 
-Java scaffolding for mobile development
+MVP Framework with Dagger2 Scaffolding
 
 ## Getting Started
 
@@ -11,18 +11,6 @@ These instructions will get you a copy of the project up and running on your loc
 Things you needed to run this application
 
 * [Android Studio](https://developer.android.com/studio/index.html) - IDE
-
-### Changing application name
-
-Please follow instructions given in this [link](https://stackoverflow.com/questions/16804093/android-studio-rename-package/29092698#29092698).
-
-After performing instructions above you must close the Android Studio and go to project location then change filename **java-mobile-scaffolding**.iml to **[AppName]**.iml
-
-After changing filename, Open the file and change *external.linked.project.id* value to application name
-
-After changing value. Rename project folder.
-
-Done!
 
 ## Built With
 
