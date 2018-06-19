@@ -12,6 +12,8 @@ import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
 import dagger.android.support.HasSupportFragmentInjector;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 import timber.log.Timber;
 
 /**
@@ -29,8 +31,8 @@ public class BaseApplication extends Application implements HasActivityInjector,
         super.onCreate();
 
 //      REALM DB
-//        Realm.init(this);
-//        initRealmConfiguration();
+        Realm.init(this);
+        initRealmConfiguration();
 
         configureExceptionLogging();
 
@@ -60,11 +62,11 @@ public class BaseApplication extends Application implements HasActivityInjector,
         }
     }
 
-//    private void initRealmConfiguration(){
-//        RealmConfiguration config = new RealmConfiguration.Builder().name("kompsos.realm").deleteRealmIfMigrationNeeded().build();
-////        Realm.deleteRealm(config); Log.e("START", "DELETE REALM");
-//        Realm.setDefaultConfiguration(config);
-//    }
+    private void initRealmConfiguration(){
+        RealmConfiguration config = new RealmConfiguration.Builder().name("demo.realm").deleteRealmIfMigrationNeeded().build();
+//        Realm.deleteRealm(config); Log.e("START", "DELETE REALM");
+        Realm.setDefaultConfiguration(config);
+    }
 
 //    /** A tree which logs important information for crash reporting. */
 //    private static class CrashReportingTree extends Timber.Tree {

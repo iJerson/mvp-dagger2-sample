@@ -13,6 +13,7 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import io.realm.Realm;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -64,5 +65,11 @@ public class AppModule {
                 .baseUrl("http://[API_URL_HERE]")
                 .client(okHttpClient)
                 .build();
+    }
+
+    @Provides
+    @Singleton
+    Realm provideRealm(){
+        return Realm.getDefaultInstance();
     }
 }
